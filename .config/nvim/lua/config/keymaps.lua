@@ -34,7 +34,15 @@ vim.keymap.set("n", "<C-l>", function()
   harpoon:list():select(4)
 end)
 
+vim.keymap.set("n", "<C-;>", function()
+  harpoon:list():select(5)
+end)
+
 vim.keymap.set("n", "<C-n>", function()
+  harpoon:list():next()
+end)
+
+vim.keymap.set("n", "<C-p>", function()
   harpoon:list():next()
 end)
 
@@ -49,6 +57,7 @@ vim.keymap.set({ "n", "i", "v" }, "<C-d>", "<C-d>zz")
 vim.keymap.set({ "n", "v", "o" }, "<leader>d", [["_d]])
 vim.keymap.set({ "n", "v", "o" }, "<leader>dd", [["_dd]])
 vim.keymap.set({ "n", "v", "o" }, "<leader>D", [["_D]])
+vim.keymap.set("n", "x", [["_dl]])
 
 --CUSTOM KEYBINDS!!!
 local opts = { noremap = true }
@@ -63,3 +72,4 @@ vim.keymap.set({ "n", "v" }, "<M-b>", "%", opts)
 --vim.keymap.set({ "n", "v", "o" }, "h", "i", opts)
 vim.keymap.set("i", "jj", "<Esc>", opts)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)

@@ -2,10 +2,10 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "logo": {
     "type": "auto",
-    "source": "~/.config/fastfetch/pinrose",
+    "source": "~/.config/fastfetch/miku",
     "color": {
-      "1": "",
-      "2": "",
+      "1": "#86cecb",
+      "2": "red",
       "3": "",
       "4": "",
       "5": "",
@@ -17,9 +17,9 @@
     "width": null,
     "height": null,
     "padding": {
-      "top": 4,
-      "left": 5,
-      "right": 5
+      "top": 2,
+      "left": 3,
+      "right": 0
     },
     "printRemaining": true,
     "preserveAspectRatio": false,
@@ -143,10 +143,6 @@
       "keyIcon": "󰌢"
     },
     {
-      "type": "kernel",
-      "keyIcon": ""
-    },
-    {
       "type": "uptime",
       "keyIcon": ""
     },
@@ -168,35 +164,6 @@
       "compactType": "none",
       "preciseRefreshRate": false,
       "order": null
-    },
-    {
-      "type": "de",
-      "keyIcon": ""
-    },
-    {
-      "type": "wm",
-      "keyIcon": "",
-      "detectPlugin": false
-    },
-    {
-      "type": "wmtheme",
-      "keyIcon": "󰓸"
-    },
-    {
-      "type": "theme",
-      "keyIcon": "󰉼"
-    },
-    {
-      "type": "icons",
-      "keyIcon": ""
-    },
-    {
-      "type": "font",
-      "keyIcon": ""
-    },
-    {
-      "type": "cursor",
-      "keyIcon": "󰆿"
     },
     {
       "type": "terminal",
@@ -251,7 +218,7 @@
       "showExternal": true,
       "showHidden": false,
       "showSubvolumes": false,
-      "showReadOnly": true,
+      "showReadOnly": false,
       "showUnknown": false,
       "folders": "",
       "hideFolders": "",
@@ -292,10 +259,6 @@
     {
       "type": "poweradapter",
       "keyIcon": "󰚥"
-    },
-    {
-      "type": "locale",
-      "keyIcon": ""
     },
     "break",
     {
