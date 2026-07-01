@@ -13,10 +13,9 @@
       export KEYTIMEOUT=1
 
       nixswitch() {
-        sudo /run/current-system/sw/bin/darwin-rebuild switch --flake ~/.config/nix
+        sudo darwin-rebuild switch --flake ~/dotfiles/.config/nix
       }
 
-      alias nixup="pushd ~/.config/snowflake; nix flake update; nixswitch; popd"
       alias ls="ls --color=auto"
       alias ll="ls -lahrts"
       alias l="ls -l"

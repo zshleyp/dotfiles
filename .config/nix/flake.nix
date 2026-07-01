@@ -1,13 +1,16 @@
 {
-  description = "zshleyp flake";
+  description = "this laptop is adachi rei! :3";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs-old.url = "github:nixos/nixpkgs/nixos-25.11";
+
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nixpkgs-old, nix-homebrew }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -19,7 +22,15 @@
           fastfetch
           zsh-vi-mode
           stow
-        ];
+          fzf
+          nodejs
+          pnpm
+          lua
+          yt-dlp
+          mpd
+          rmpc
+          cava
+        ]; # ++ [(import nixpkgs-old { inherit (pkgs) system; }).neovim];
 
       fonts.packages = with pkgs; [
         nerd-fonts.jetbrains-mono
@@ -43,11 +54,23 @@
       nixpkgs.hostPlatform = "aarch64-darwin";
     };
   in
-  {
-    # Build darwin flake using:
+  {    # Build darwin flake using:
     # $ darwin-rebuild build --flake .#zshleyp
-    darwinConfigurations."zshleyp" = nix-darwin.lib.darwinSystem {
-      modules = [ configuration ];
+    darwinConfigurations."rei" = nix-darwin.lib.darwinSystem {
+      modules = [ 
+        configuration
+        ./modules
+        
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+            nix-homebrew = {
+                enable = true;
+                enableRosetta = true;
+                user = "zshleyp";
+                autoMigrate = true;
+            };
+        }
+      ];
     };
   };
 }

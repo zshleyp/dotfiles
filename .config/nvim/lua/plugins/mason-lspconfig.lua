@@ -1,6 +1,8 @@
 return {
   "mason-org/mason-lspconfig.nvim",
-  opts = {},
+  opts = {
+      ensure_installed = {"svelte", "cssls", "html", "ts_ls", "rust_analyzer"}
+  },
   dependencies = {
     { "mason-org/mason.nvim", opts = {} },
     "neovim/nvim-lspconfig",
