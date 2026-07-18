@@ -10,7 +10,6 @@
       fastfetch
 
       bindkey -v
-      export KEYTIMEOUT=1
 
       nixswitch() {
         sudo darwin-rebuild switch --flake ~/dotfiles/.config/nix
@@ -20,7 +19,7 @@
       alias ll="ls -lahrts"
       alias l="ls -l"
       alias mommy="sudo"
-      alias vi="nvim"
+      alias vi="/run/current-system/sw/bin/vis"
       alias vim="nvim"
       alias python="python3"
     '';

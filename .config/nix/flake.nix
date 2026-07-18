@@ -17,6 +17,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs; [
           neovim
+          vis
           starship
           zoxide
           fastfetch
@@ -30,6 +31,8 @@
           mpd
           rmpc
           cava
+          btop
+          lua-language-server
         ]; # ++ [(import nixpkgs-old { inherit (pkgs) system; }).neovim];
 
       fonts.packages = with pkgs; [

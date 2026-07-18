@@ -2,7 +2,7 @@
 #![enable(unwrap_newtypes)]
 #![enable(unwrap_variant_newtypes)]
 (
-    theme: Some("~/dotfiles/.config/rmpc/catppuccin-mocha.ron"),
+    theme: Some("~/dotfiles/.config/rmpc/adachi.ron"),
     cache_dir: Some("~/.cache/rmpc"),
     password: None,
     volume_step: 5,
@@ -149,8 +149,8 @@ cava: (
     (size: "1", pane: Pane(Property(
 
     content: [
-        (kind: Property(Song(Album)), style: (fg: "#cdd6f4", modifiers: "Bold"),
-                        default: (kind: Text("Unknown Album"), style: (fg: "#cdd6f4", modifiers: "Bold"))
+        (kind: Property(Song(Album)), style: (fg: "#c8c8c8", modifiers: "Bold"),
+                        default: (kind: Text("Unknown Album"), style: (fg: "#c8c8c8", modifiers: "Bold"))
                     )
                                 ],
                                     align: Center,)), vertical_align: top),
@@ -158,14 +158,14 @@ cava: (
                         (size: "1", pane: Pane(Property(
 
     content: [
-        (kind: Property(Song(Artist)), style: (fg: "#fab387", modifiers: "Bold"),
-                        default: (kind: Text("Unknown"), style: (fg: "#fab387", modifiers: "Bold"))
+        (kind: Property(Song(Artist)), style: (fg: "#ff2300", modifiers: "Bold"),
+                        default: (kind: Text("Unknown"), style: (fg: "#ff2300", modifiers: "Bold"))
                     ),
 
-        (kind: Text(" - "), style: (fg : "#cdd6f4", modifiers: "Bold") ),
+        (kind: Text(" - "), style: (fg : "#c8c8c8", modifiers: "Bold") ),
 
-        (kind: Property(Song(Title)), style: (fg: "#f9e2af", modifiers: "Bold"), 
-                        default: (kind: Text("No Song"), style: (fg: "#f9e2af", modifiers: "Bold"))
+        (kind: Property(Song(Title)), style: (fg: "#ff4600", modifiers: "Bold"), 
+                        default: (kind: Text("No Song"), style: (fg: "#ff4600", modifiers: "Bold"))
                     ),
 
 
@@ -179,12 +179,12 @@ cava: (
 (size: "1", pane: Pane(Property(
 
     content: [
-        (kind: Text("("), style: (fg: "#cdd6f4")),
-        (kind: Property(Status(Elapsed)), style: (fg: "#cdd6f4", modifiers: "Bold"),
+        (kind: Text("("), style: (fg: "#c8c8c8")),
+        (kind: Property(Status(Elapsed)), style: (fg: "#c8c8c8", modifiers: "Bold"),
                     ),
-(kind: Text(" / "), style: (fg: "#cdd6f4")),
-    (kind: Property(Song(Duration)), style: (fg: "#cdd6f4", modifiers: "Bold")),
-        (kind: Text(")"), style: (fg: "#cdd6f4")),
+(kind: Text(" / "), style: (fg: "#c8c8c8")),
+    (kind: Property(Song(Duration)), style: (fg: "#c8c8c8", modifiers: "Bold")),
+        (kind: Text(")"), style: (fg: "#c8c8c8")),
                                 ],
                                     align: Center,)), vertical_align: top),
 
@@ -251,14 +251,14 @@ cava: (
 		(size: "1", pane: Pane(Property(
 
     content: [
-        (kind: Property(Song(Artist)), style: (fg: "#fab387", modifiers: "Bold"),
-                        default: (kind: Text("Unknown"), style: (fg: "#fab387", modifiers: "Bold"))
+        (kind: Property(Song(Artist)), style: (fg: "#ff2300", modifiers: "Bold"),
+                        default: (kind: Text("Unknown"), style: (fg: "#ff2300", modifiers: "Bold"))
                     ),
 
         (kind: Text(" - ")),
 
-        (kind: Property(Song(Title)), style: (fg: "#f9e2af", modifiers: "Bold"), 
-                        default: (kind: Text("No Song"), style: (fg: "#f9e2af", modifiers: "Bold"))
+        (kind: Property(Song(Title)), style: (fg: "#ff4600", modifiers: "Bold"), 
+                        default: (kind: Text("No Song"), style: (fg: "#ff4600", modifiers: "Bold"))
                     ),
 
 

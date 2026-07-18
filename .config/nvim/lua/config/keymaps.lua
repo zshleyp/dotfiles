@@ -2,31 +2,33 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local map = vim.keymap.set
+
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+map("n", "<leader>u", vim.cmd.UndotreeToggle)
+map("n", "<leader>gs", vim.cmd.Git)
 
-vim.keymap.set({ "n", "i", "v" }, "<C-f>", "<C-f>zz")
-vim.keymap.set({ "n", "i", "v" }, "<C-b>", "<C-b>zz")
-vim.keymap.set({ "n", "i", "v" }, "<C-u>", "<C-u>zz")
-vim.keymap.set({ "n", "i", "v" }, "<C-d>", "<C-d>zz")
+map({ "n", "i", "v" }, "<C-f>", "<C-f>zz")
+map({ "n", "i", "v" }, "<C-b>", "<C-b>zz")
+map({ "n", "i", "v" }, "<C-u>", "<C-u>zz")
+map({ "n", "i", "v" }, "<C-d>", "<C-d>zz")
 
-vim.keymap.set({ "n", "v", "o" }, "<leader>d", [["_d]])
-vim.keymap.set({ "n", "v", "o" }, "<leader>dd", [["_dd]])
-vim.keymap.set({ "n", "v", "o" }, "<leader>D", [["_D]])
-vim.keymap.set("n", "x", [["_dl]])
+map({ "n", "v", "o" }, "<leader>d", [["_d]])
+map({ "n", "v", "o" }, "<leader>dd", [["_dd]])
+map({ "n", "v", "o" }, "<leader>D", [["_D]])
+map("n", "x", [["_dl]])
 
---CUSTOM KEYBINDS!!!
+-- Stolen from lazy.vim lmao
+map("n", "<D-J>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+map("n", "<D-K>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+map("i", "<D-J>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+map("i", "<D-K>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+map("v", "<D-J>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+map("v", "<D-K>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+
+-- idk what this does but im too lazy to remove it zzz
 local opts = { noremap = true }
 
-vim.keymap.set({ "n", "v" }, "<M-b>", "%", opts)
-
---vim.keymap.set({ "n", "v", "o" }, "i", "k", opts)
---vim.keymap.set({ "n", "v", "o" }, "k", "j", opts)
---vim.keymap.set({ "n", "v", "o" }, "j", "h", opts)
---vim.keymap.set({ "n", "v", "o" }, "H", "I", opts)
---
---vim.keymap.set({ "n", "v", "o" }, "h", "i", opts)
-vim.keymap.set("i", "jj", "<Esc>", opts)
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
+map("i", "jj", "<Esc>", opts)
+map("n", "gd", vim.lsp.buf.definition)
+map("n", "<leader>r", vim.lsp.buf.rename)

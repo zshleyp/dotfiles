@@ -41,7 +41,7 @@ yabai -m rule --add app="^System Preferences$" manage=off
 # show digital colour meter topmost and on all spaces
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 
-yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
-yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
+# yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+# yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
 
 yabai -m config external_bar all:32:0

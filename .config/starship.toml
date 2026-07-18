@@ -1,4 +1,4 @@
-palette = "catppuccin_mocha"
+palette = "adachi-rei"
 
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
@@ -24,23 +24,27 @@ style = "bold blue"
 [package]
 disabled = true
 
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
+[palettes.adachi-rei]
+
+red = "#ff2300"
+maroon = "#ff2300"
+
+peach = "#ff4600"
+yellow = "#ff4600"
+
+green = "#c8dcc8"
+
 teal = "#94e2d5"
 sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
+
+sapphire = "#c8c8dc"
+blue = "#c8c8dc"
+
+lavender = "#d2c8d2"
+mauve = "#d2c8d2"
+
+text = "#c8c8c8"
+subtext1 = "#c8c8c8"
 subtext0 = "#a6adc8"
 overlay2 = "#9399b2"
 overlay1 = "#7f849c"
@@ -48,6 +52,6 @@ overlay0 = "#6c7086"
 surface2 = "#585b70"
 surface1 = "#45475a"
 surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+base = "#101010"
+mantle = "#101010"
+crust = "#101010"
